@@ -1,6 +1,6 @@
 <div align="center">
 
-<img src="assets/connection-toolkit-banner.png" alt="LinkedIn Connection Toolkit: Connect with confidence — spreadsheet and networking illustration" width="100%" />
+
 
 <br />
 
