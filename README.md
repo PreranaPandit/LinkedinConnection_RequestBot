@@ -64,19 +64,6 @@ flowchart LR
 
 On GitHub, choose **Code → Download ZIP**, then extract the folder. If you use Git, you can clone the repository instead.
 
-Your project folder will look something like this:
-
-```text
-linkedin-connection-toolkit/
-├── README.md
-├── requirements.txt
-├── commands.txt
-├── linkedin_connection_review.py
-├── assets/
-│   └── connection-toolkit-banner.png
-└── linkedin_database.csv         # your private input; do not upload to GitHub
-```
-
 ### 2. Check your Python installation
 
 Open **Windows Command Prompt** in the project folder and run:
@@ -106,8 +93,6 @@ The requirements file contains the direct dependencies `pandas`, `openpyxl`, and
 ### 5. Add your spreadsheet
 
 Put your input file in the same folder as the script. It can be named `linkedin_database.csv` or anything you prefer.
-
-**Please don't commit real participant data, email addresses, or connection histories to a public repository.**
 
 ### 6. Start your connection review
 
@@ -160,70 +145,8 @@ Interested in the **optional Selenium-based invitation helper** that attempts to
 
 Please use **“LinkedIn Auto-Invite Code Request”** as the subject and briefly tell me how you plan to use it. I can share more information about the code and its limitations.
 
-**Important:** That helper is **not part of the public review walkthrough** and is not an official LinkedIn integration. LinkedIn may restrict accounts for unauthorized automated activity. UI changes, verification prompts, invitation limits, or unavailable “Add a note” options can stop automation. Never bypass access controls, and do not assume an invitation was delivered simply because a button was clicked.
+**Important:** For learning purpose only!
 
-## 🛠️ Troubleshooting
-
-<details>
-<summary><strong>“FileNotFoundError: No such file or directory”</strong></summary>
-
-Make sure your spreadsheet is in the folder where you run the command, or provide its complete path:
-
-```bat
-python linkedin_connection_review.py "C:\Users\YourName\Downloads\participants.xlsx"
-```
-
-</details>
-
-<details>
-<summary><strong>“ModuleNotFoundError: No module named pandas”</strong></summary>
-
-Install the dependencies into the Python environment used by your terminal:
-
-```bat
-python -m pip install -r requirements.txt
-```
-
-</details>
-
-<details>
-<summary><strong>“The file must have at least four columns”</strong></summary>
-
-Add the profile URLs in column D, or edit the `URL_COLUMN_INDEX` variable in the script to match your file. Column numbering starts at zero in Python.
-
-</details>
-
-<details>
-<summary><strong>Do I need Firefox or a browser driver?</strong></summary>
-
-Not for `linkedin_connection_review.py`: it opens URLs in your default browser. The optional Selenium-based helper uses Firefox and may need a compatible browser driver (often managed automatically by Selenium).
-
-</details>
-
-<details>
-<summary><strong>Does the public script detect whether we're already connected?</strong></summary>
-
-No. It checks URL formatting and duplicates. **You** inspect the LinkedIn profile and record `connected`, `pending`, or another status. This avoids pretending that the script can reliably inspect your private LinkedIn account.
-
-</details>
-
-## 🛡️ Privacy and responsible use
-
-- Use participant data you have permission to process, and avoid publishing personal data or private connection histories.
-- Keep passwords, session cookies, tokens, and `.env` files **out of your repository**.
-- Respect LinkedIn's terms and invitation limits. This toolkit is independent and is **not affiliated with or endorsed by LinkedIn**.
-- Prefer relevant, consensual networking over unsolicited mass outreach.
-
-## 📁 Suggested files for GitHub
-
-| File | Purpose |
-|---|---|
-| `README.md` | Project introduction and instructions (this page). |
-| `assets/connection-toolkit-banner.png` | Banner image displayed above. |
-| `linkedin_connection_review.py` | Public, review-first workflow. |
-| `requirements.txt` | Python packages needed to run the scripts. |
-| `commands.txt` | Handy terminal commands. |
-| `.gitignore` | Helps keep local lists, environments, and results out of Git. |
 
 ## 📬 Contact
 
