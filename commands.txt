@@ -1,0 +1,19 @@
+# Windows Command Prompt commands
+# Run from the folder containing requirements.txt and your Python script.
+
+# Optional: create and activate a virtual environment
+python -m venv .venv
+.venv\Scripts\activate
+
+# Install dependencies
+python -m pip install --upgrade pip
+python -m pip install -r requirements.txt
+
+# Check installed package versions
+python -m pip show selenium pandas openpyxl
+
+# Review the CSV (no sending)
+python linkedin_auto_invites.py linkedin_database.csv
+
+# Review an Excel file instead (replace with your filename)
+# python linkedin_auto_invites.py participants.xlsx

@@ -1,0 +1,4 @@
+# Python dependencies for the LinkedIn CSV/Excel review script
+selenium
+pandas
+openpyxl
